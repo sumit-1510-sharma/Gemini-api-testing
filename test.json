@@ -1,0 +1,34 @@
+{
+  "generationConfig": {
+    "response_mime_type": "application/json",
+    "response_schema": {
+      "type": "OBJECT",
+      "properties": {
+        "slides": {
+          "type": "ARRAY",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "slide_no": {
+                "type": "INTEGER"
+              },
+              "title": {
+                "type": "STRING"
+              },
+              "subtext": {
+                "type": "STRING"
+              }
+            },
+            "required": ["slide_no", "text", "subtext"],
+            "propertyOrdering": ["slide_no", "text", "subtext"],
+            "nullable": true
+          }
+        }
+      },
+      "required": ["slides"],
+      "nullable": true
+    }
+  }
+}

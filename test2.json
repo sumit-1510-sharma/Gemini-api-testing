@@ -1,0 +1,40 @@
+"response_format": {
+        "type": "json_schema",
+        "json_schema": {
+            "name": "carousel_response",
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "slides": {
+                        "type": "array",
+                        "minItems": 6,
+                        "maxItems": 6,
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "slide_no": {
+                                    "type": "integer"
+                                },
+                                "title": {
+                                    "type": "string"
+                                },
+                                "subtext": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "slide_no",
+                                "title",
+                                "subtext"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "required": [
+                    "slides"
+                ],
+                "additionalProperties": false
+            }
+        }
+    }
